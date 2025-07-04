@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQItem = ({ question, categoryId, onVote }) => {
     return (
-        <div className="faq-item">
+        <div className="faq_item">
             <p className="faq-question"><strong>{question.question}</strong></p>
             <p className="faq-answer">{question.answer}</p>
             <div className="vote-buttons">

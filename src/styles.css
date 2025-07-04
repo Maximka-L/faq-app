@@ -1,3 +1,26 @@
+:root {
+  --grafit:#333333;
+  --grei:#a0a0a0;
+  --grei_light:#cbcbcb;
+  --white:#ffffff;
+}
+
+@font-face {
+  font-family: "MegaFon Graphik LC Web Smbd Regular";
+  src: url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.eot");
+  src: url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.svg#MegaFon Graphik LC Web Smbd Regular")format("svg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "MegaFon Graphik LC Web Smbd Regular";
+}
+
 .category-header {
   display: flex;
   justify-content: space-between;
@@ -15,7 +38,6 @@
 
 .category-title {
   font-size: 20px;
-  font-family: "MegaFon Graphik LC Web Smbd Regular";
   margin: 0;
 }
 
@@ -32,4 +54,45 @@
   color: #888;
   min-width: 40px;
   text-align: right;
+}
+
+.layout{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+
+}
+
+.faq_header {
+  width: 50%;
+
+}
+.faq_header h1 {
+  font-size: 8rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.main_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.category {
+  font-size: 1.5rem;
+
+}
+
+.faq_item{
+  font-size: 1rem;
+
 }

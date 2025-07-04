@@ -55,10 +55,17 @@ function App() {
     });
 
     return (
+        <div className="container">
         <div className="layout">
-            {/* Левая колонка — FAQ */}
-            <div className="faq-panel">
-                <h1>Часто задаваемые вопросы</h1>
+
+            <div className="faq_header">
+                <h1>FAQ</h1>
+
+
+            </div>
+
+
+            <div className="main_content">
                 {sortedCategories.map(category => (
                     <Category
                         key={category.id}
@@ -67,16 +74,9 @@ function App() {
                         onToggle={() => toggleCategory(category.id)}
                     />
                 ))}
-            </div>
 
-            {/* Правая колонка — основной текст */}
-            <div className="main-content">
-                <h2>Основная информация</h2>
-                <p>
-                    Здесь может быть текст, описание, инструкции или другой важный контент,
-                    связанный с вопросами.
-                </p>
             </div>
+        </div>
         </div>
     );
 }
