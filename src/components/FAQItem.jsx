@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FAQItem = ({ question, categoryId, onVote }) => {
+const FAQItem = ({ question, categoryId, onVote, onToggleQuestion }) => {
     return (
         <div className="faq_item">
             {/*<div className="faq_block">*/}
@@ -16,9 +16,11 @@ const FAQItem = ({ question, categoryId, onVote }) => {
             {/*    <button onClick={() => onVote(categoryId, question.id, -1)}>Нет</button>*/}
             {/*    <span className="rating">Рейтинг: {question.rating}</span>*/}
             {/*</div>*/}
-            <div className="faq_grid">
+            <div className="faq_grid" onClick={() => onToggleQuestion(categoryId, question.id)}>
                 <div className="faq_label">Вопрос</div>
                 <div className="faq_content_quest">{question.question}</div>
+                {question.isOpen && (
+                    <>
                 <div className="faq_label">Ответ</div>
                 <div className="faq_content_answer">{question.answer}</div>
                 <div className="feedback_spacer"></div>
@@ -29,6 +31,7 @@ const FAQItem = ({ question, categoryId, onVote }) => {
                         <button className="btn_no">Нет</button>
                     </div>
                 </div>
+            </>)}
             </div>
 
         </div>

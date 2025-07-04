@@ -13,7 +13,8 @@ function App() {
             isOpen: false,
             questions: cat.questions.map(q => ({
                 ...q,
-                rating: saved[q.id] ?? q.rating
+                rating: saved[q.id] ?? q.rating,
+                isOpen: false,
             }))
         }));
         setCategories(updated);
@@ -35,6 +36,20 @@ function App() {
     const toggleCategory = (id) => {
         setCategories(prev =>
             prev.map(cat => cat.id === id ? { ...cat, isOpen: !cat.isOpen } : cat)
+        );
+    };
+    const toggleQuestion = (categoryId, questionId) => {
+        setCategories((prev) =>
+            prev.map((cat) =>
+                cat.id === categoryId
+                    ? {
+                        ...cat,
+                        questions: cat.questions.map((q) =>
+                            q.id === questionId ? {...q, isOpen: !q.isOpen} : q
+                        ),
+                    }
+                    : cat
+            )
         );
     };
 
@@ -72,6 +87,7 @@ function App() {
                         category={category}
                         onVote={handleVote}
                         onToggle={() => toggleCategory(category.id)}
+                        onToggleQuestion={toggleQuestion}
                     />
                 ))}
 

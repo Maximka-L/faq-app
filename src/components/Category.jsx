@@ -2,7 +2,7 @@ import React from 'react';
 import FAQItem from './FAQItem';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
-const Category = ({ category, onVote, onToggle }) => {
+const Category = ({ category, onVote, onToggle, onToggleQuestion }) => {
     const sortedQuestions = [...category.questions].sort((a, b) => b.rating - a.rating);
     const totalRating = category.questions.reduce((sum, q) => sum + q.rating, 0);
 
@@ -30,6 +30,7 @@ const Category = ({ category, onVote, onToggle }) => {
                             question={question}
                             categoryId={category.id}
                             onVote={onVote}
+                            onToggleQuestion={onToggleQuestion}
                         />
                     ))}
                 </div>
