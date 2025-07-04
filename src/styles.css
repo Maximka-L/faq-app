@@ -41,6 +41,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "MegaFon Graphik LC Web Reg Regular";
+  color: var(--grafit);
 }
 
 .category-header {
@@ -48,8 +49,7 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 16px 0;
-  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
 }
 
 .title-with-icon {
@@ -101,6 +101,7 @@ body {
   font-size: 8rem;
   margin: 0;
   font-weight: 600;
+
 }
 
 .main_content {
@@ -126,10 +127,66 @@ body {
   gap: 50px;
 }
 
-.title_item {
-  font-size: 0.9rem;
+.faq_grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  border-bottom: 1px solid var(--grei_light);
+  margin-top: 24px;
+}
+
+.faq_label {
+  font-size: 14px;
   color: var(--grei);
   text-transform: uppercase;
-  font-weight: 300;
+  align-self: start;
+}
 
+.faq_content_quest {
+  font-size: 15px;
+  font-family: "MegaFon Graphik LC Web Med Regular";
+}
+
+.faq_content_answer {
+  font-size: 15px;
+  font-family: "MegaFon Graphik LC Web Reg Regular";
+  line-height: 24px;
+}
+
+.btn_yes, .btn_no {
+  background-color:transparent;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid var(--grei);
+  font-family: "MegaFon Graphik LC Web Reg Regular";
+  font-size: 12px;
+  color: var(--grei);
+  width: 55px;
+  cursor:  pointer;
+}
+
+.btn_yes:hover, .btn_no:hover {
+  border: 1px solid var(--grafit);
+  color: var(--grafit);
+}
+
+
+.feedback_content {
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  align-items: center;
+  margin-bottom: 32px;
+
+}
+
+.feedback_content p{
+  font-family: "MegaFon Graphik LC Web Reg Regular";
+  font-size: 12px;
+  color: var(--grei);
+}
+
+.feedback_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }

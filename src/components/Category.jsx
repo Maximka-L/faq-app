@@ -19,9 +19,7 @@ const Category = ({ category, onVote, onToggle }) => {
                         )}
                     </div>
                 </div>
-                <span className="rating">
-                    {totalRating >= 0 ? `+${totalRating}` : totalRating}
-                </span>
+
             </div>
 
             {category.isOpen && (
