@@ -10,7 +10,7 @@ const Category = ({ category, onVote, onToggle }) => {
         <div className="category">
             <div className="category-header" onClick={onToggle}>
                 <div className="title-with-icon">
-                    <h2 className="category-title">{category.name}</h2>
+                    <h2 className="category_title">{category.name}</h2>
                     <div className="arrow">
                         {category.isOpen ? (
                             <ChevronDown size={24} strokeWidth={2} />

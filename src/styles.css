@@ -13,12 +13,34 @@
   url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.woff")format("woff"),
   url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.ttf")format("truetype"),
   url("https://db.onlinewebfonts.com/t/21d12c1fb1566e0685bb6ace3a747dde.svg#MegaFon Graphik LC Web Smbd Regular")format("svg");
+
+
 }
+@font-face {
+  font-family: "MegaFon Graphik LC Web Med Regular";
+  src: url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.eot");
+  src: url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/c7e87d8ed617299a830fd3f312606e6e.svg#MegaFon Graphik LC Web Med Regular")format("svg");
+}
+
+@font-face {
+  font-family: "MegaFon Graphik LC Web Reg Regular";
+  src: url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.eot");
+  src: url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/2684398d473569bfdd3b71e2f2b79cda.svg#MegaFon Graphik LC Web Reg Regular")format("svg");
+}
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "MegaFon Graphik LC Web Smbd Regular";
+  font-family: "MegaFon Graphik LC Web Reg Regular";
 }
 
 .category-header {
@@ -36,9 +58,10 @@ body {
   gap: 8px;
 }
 
-.category-title {
-  font-size: 20px;
+.category_title {
+  font-size: 24px;
   margin: 0;
+  font-family:  "MegaFon Graphik LC Web Smbd Regular";
 }
 
 .arrow {
@@ -56,7 +79,7 @@ body {
   text-align: right;
 }
 
-.layout{
+.layout {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -71,6 +94,7 @@ body {
 
 .faq_header {
   width: 50%;
+  font-family: "MegaFon Graphik LC Web Smbd Regular";
 
 }
 .faq_header h1 {
@@ -94,5 +118,18 @@ body {
 
 .faq_item{
   font-size: 1rem;
+
+}
+.faq_block {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.title_item {
+  font-size: 0.9rem;
+  color: var(--grei);
+  text-transform: uppercase;
+  font-weight: 300;
 
 }
