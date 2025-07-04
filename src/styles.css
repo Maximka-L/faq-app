@@ -1,0 +1,35 @@
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-family: "MegaFon Graphik LC Web Smbd Regular";
+  margin: 0;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.rating {
+  font-size: 16px;
+  color: #888;
+  min-width: 40px;
+  text-align: right;
+}
