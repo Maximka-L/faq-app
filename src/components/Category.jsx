@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQItem from './FAQItem';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import {ChevronDown, ChevronUp} from 'lucide-react';
 
 const Category = ({ category, onVote, onToggle, onToggleQuestion }) => {
     const sortedQuestions = [...category.questions].sort((a, b) => b.rating - a.rating);
@@ -8,14 +8,14 @@ const Category = ({ category, onVote, onToggle, onToggleQuestion }) => {
 
     return (
         <div className="category">
-            <div className="category-header" onClick={onToggle}>
-                <div className="title-with-icon">
+            <div className="category_header" onClick={onToggle}>
+                <div className="title_with_icon">
                     <h2 className="category_title">{category.name}</h2>
                     <div className="arrow">
                         {category.isOpen ? (
-                            <ChevronDown size={24} strokeWidth={2} />
+                            <ChevronUp size={24} strokeWidth={2} />
                         ) : (
-                            <ChevronRight size={24} strokeWidth={2} />
+                            <ChevronDown size={24} strokeWidth={2} />
                         )}
                     </div>
                 </div>

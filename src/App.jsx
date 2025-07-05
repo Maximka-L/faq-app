@@ -15,22 +15,36 @@ function App() {
                 ...q,
                 rating: saved[q.id] ?? q.rating,
                 isOpen: false,
+                voted: false,
             }))
         }));
         setCategories(updated);
     }, []);
 
     const handleVote = (categoryId, questionId, delta) => {
-        setCategories(prev =>
-            prev.map(cat => cat.id === categoryId
-                ? {
-                    ...cat,
-                    questions: cat.questions.map(q =>
-                        q.id === questionId ? { ...q, rating: q.rating + delta } : q
-                    )
-                }
-                : cat)
-        );
+        setCategories((prev) => {
+            const updated = prev.map((cat) =>
+                cat.id === categoryId
+                    ? {
+                        ...cat,
+                        questions: cat.questions.map((q) =>
+                            q.id === questionId ? {...q, rating: q.rating + delta, voted:true} : q
+                        ),
+                    }
+                    : cat
+            );
+            const updatedCategory = updated.find((cat) => cat.id === categoryId);
+            const totalVotes = updatedCategory.questions.reduce(
+                (sum, q) => sum + q.rating,
+                0
+            );
+            console.log(
+                `Голосы записаны - Category ID: ${categoryId}, Question ID: ${questionId}, Vote: ${
+                    delta > 0 ? "Upvoted" : "Downvoted"
+                }, Общее количество голосов: ${totalVotes}`
+            );
+            return updated;
+        });
     };
 
     const toggleCategory = (id) => {
