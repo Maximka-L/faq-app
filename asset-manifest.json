@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/faq-app/static/css/main.6a14a954.css",
+    "main.js": "/faq-app/static/js/main.8d454ad5.js",
+    "index.html": "/faq-app/index.html",
+    "main.6a14a954.css.map": "/faq-app/static/css/main.6a14a954.css.map",
+    "main.8d454ad5.js.map": "/faq-app/static/js/main.8d454ad5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a14a954.css",
+    "static/js/main.8d454ad5.js"
+  ]
+}
