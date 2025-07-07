@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQItem = ({ question, categoryId, onVote, onToggleQuestion }) => {
-    // Проверка наличия обязательных данных
+    
     if (!question || !categoryId) return null;
 
     const handleToggle = () => {
