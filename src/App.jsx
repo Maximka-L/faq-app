@@ -6,7 +6,7 @@ import './styles.css';
 function App() {
     const [categories, setCategories] = useState([]);
 
-    // Инициализация данных
+    
     useEffect(() => {
         const savedVotes = JSON.parse(localStorage.getItem('faqVotes')) || {};
         const initializedCategories = faqData.categories.map(cat => ({
@@ -16,13 +16,13 @@ function App() {
                 ...q,
                 rating: savedVotes[q.id] ?? q.rating,
                 isOpen: false,
-                voted: !!savedVotes[q.id] // Автоматически отмечаем как проголосованные если есть сохраненный рейтинг
+                voted: !!savedVotes[q.id] 
             }))
         }));
         setCategories(initializedCategories);
     }, []);
 
-    // Голосование с useCallback для оптимизации
+    
     const handleVote = useCallback((categoryId, questionId, delta) => {
         setCategories(prev => prev.map(cat =>
             cat.id === categoryId ? {
@@ -57,7 +57,7 @@ function App() {
         ));
     }, []);
 
-    // Сохранение в localStorage
+    
     useEffect(() => {
         if (categories.length > 0) {
             const votesMap = categories.reduce((acc, cat) => {
@@ -70,7 +70,7 @@ function App() {
         }
     }, [categories]);
 
-    // Сортировка категорий
+    
     const sortedCategories = React.useMemo(() => {
         return [...categories].sort((a, b) => {
             const sumRating = questions => questions.reduce((sum, q) => sum + q.rating, 0);
