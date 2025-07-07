@@ -3,12 +3,12 @@ import FAQItem from './FAQItem';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const Category = ({ category, onVote, onToggle, onToggleQuestion }) => {
-    // Защита от отсутствия категории
+   
     if (!category || !category.questions) {
-        return null; // или заглушку: <div>Категория не загружена</div>
+        return null; 
     }
 
-    // Сортируем вопросы по рейтингу (без useMemo для простоты)
+    
     const sortedQuestions = [...category.questions].sort((a, b) => b.rating - a.rating);
 
     return (
